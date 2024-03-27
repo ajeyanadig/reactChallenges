@@ -6,16 +6,17 @@ import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-        <Route path="product" element={<Product />}></Route>
-        <Route path="pricing" element={<Pricing />}></Route>
-        <Route path="*" element={<PageNotFound />}>
-          {" "}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <h1>h</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path="product" element={<Product />}></Route>
+          <Route path="pricing" element={<Pricing />}></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
