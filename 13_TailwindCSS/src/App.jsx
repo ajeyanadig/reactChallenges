@@ -13,6 +13,7 @@ const router = createBrowserRouter([
   {
     element: <AppLayout />,
     errorElement: <Error />,
+
     children: [
       { path: "/", element: <Home /> },
       {
@@ -37,11 +38,7 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
