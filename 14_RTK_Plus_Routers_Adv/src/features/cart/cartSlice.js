@@ -17,18 +17,17 @@ const cartSlice = createSlice({
     },
     increaseItemQuantity(state, action) {
       //id
-      const item = state.cart.find(
-        (item) => item.pizzaId === action.payload.id,
-      );
+      console.log(action);
+      const item = state.cart.find((item) => item.pizzaId === action.payload);
+      console.log(item);
       item.quantity++;
       item.totalPrice = item.quantity * item.unitPrice;
     },
     decreaseItemQuantity(state, action) {
-      const item = state.cart.find(
-        (item) => item.pizzaId === action.payload.id,
-      );
+      const item = state.cart.find((item) => item.pizzaId === action.payload);
       item.quantity--;
       item.totalPrice = item.quantity * item.unitPrice;
+      if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
     },
     clearCart(state) {
       state.cart = [];
@@ -44,6 +43,7 @@ export const {
   clearCart,
 } = cartSlice.actions;
 //reducer
+console.log(cartSlice);
 export default cartSlice.reducer;
 
 //NEW-> Selector functions for state derivation inside useSelectors can also be put here as it is cart store state manipulation logic. Now it's reusable here and there. Pretty neat
