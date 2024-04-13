@@ -35,5 +35,4 @@ const userSlice = createSlice({
   },
 });
 export const { updateName } = userSlice.actions;
-console.dir(userSlice.reducer);
 export default userSlice.reducer;
