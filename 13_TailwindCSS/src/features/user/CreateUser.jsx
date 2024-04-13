@@ -1,10 +1,9 @@
-import { useState } from "react";
-import Button from "../../ui/Button";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import Button from '../../ui/Button';
 
 function CreateUser() {
-  const [username, setUsername] = useState("");
-  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+
   function handleSubmit(e) {
     e.preventDefault();
   }
@@ -20,10 +19,10 @@ function CreateUser() {
         placeholder="Your full name"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        className="input mb-6 w-72"
+        className="input mb-8 w-72"
       />
 
-      {username !== "" && (
+      {username !== '' && (
         <div>
           <Button type="primary">Start ordering</Button>
         </div>

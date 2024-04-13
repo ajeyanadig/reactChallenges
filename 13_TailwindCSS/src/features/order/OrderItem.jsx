@@ -1,4 +1,4 @@
-import { formatCurrency } from "../../utilities/helpers";
+import { formatCurrency } from '../../utils/helpers';
 
 function OrderItem({ item, isLoadingIngredients, ingredients }) {
   const { quantity, name, totalPrice } = item;
@@ -6,10 +6,10 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
   return (
     <li className="py-3">
       <div className="flex items-center justify-between gap-4 text-sm">
-        <p className="bold">
-          <span>{quantity}&times;</span> {name}
+        <p>
+          <span className="font-bold">{quantity}&times;</span> {name}
         </p>
-        <p className="bold">{formatCurrency(totalPrice)}</p>
+        <p className="font-bold">{formatCurrency(totalPrice)}</p>
       </div>
     </li>
   );
