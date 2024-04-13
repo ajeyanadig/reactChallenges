@@ -43,7 +43,6 @@ export const {
   clearCart,
 } = cartSlice.actions;
 //reducer
-console.log(cartSlice);
 export default cartSlice.reducer;
 
 //NEW-> Selector functions for state derivation inside useSelectors can also be put here as it is cart store state manipulation logic. Now it's reusable here and there. Pretty neat
